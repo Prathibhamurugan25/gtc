@@ -1,23 +1,23 @@
-const service = require('./user.service');
+const service = require('./category.service');
 
-const getUser = (req, res) => {
-    service.getUser(req).then((result) => {
+const getCategory = (req, res) => {
+    service.getCategory(req).then((result) => {
         res.status(200).send(result);
     }).catch((err) => {
         res.status(500).send("Internal Server Error");
     })
 }
 
-const saveUser = (req, res) => {
-    service.saveUser(req).then((result) => {
+const saveCategory = (req, res) => {
+    service.saveCategory(req).then((result) => {
         res.status(200).send(result);
     }).catch((err) => {
         console.log(err);
         res.status(500).send("Internal Server Error");
     })
 }
-const updateUser = (req, res) => {
-    service.updateUser(req).then((result) => {
+const updateCategory = (req, res) => {
+    service.updateCategory(req).then((result) => {
         res.status(200).send("updated successfully");
     }).catch((err) => {
         console.log(err);
@@ -25,16 +25,16 @@ const updateUser = (req, res) => {
     })
 }
 
-const deleteUser = (req, res) => {
-    service.deleteUser(req).then((result) => {
+const deleteCategory = (req, res) => {
+    service.deleteCategory(req).then((result) => {
         res.status(200).send("Deleted successfully");
     }).catch((err) => {
         console.log(err);
         res.status(500).send("Internal Server Error");
     })
 }
-const getUserById = (req, res) => {
-    service.getUserById(req).then((result) => {
+const getCategoryById = (req, res) => {
+    service.getCategoryById(req).then((result) => {
         res.status(200).send(result);
     }).catch((err) => {
         console.log(err);
@@ -43,9 +43,9 @@ const getUserById = (req, res) => {
 }
 
 module.exports = {
-    getUser,
-    saveUser,
-    updateUser,
-    deleteUser,
-    getUserById
+    getCategory,
+    saveCategory,
+    updateCategory,
+    deleteCategory,
+    getCategoryById
 }

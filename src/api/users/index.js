@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('./wish_list.controller');
+const controller = require('./user.controller');
 
 router.get('/:id', controller.getUserById);
 router.get('/', controller.getUser);

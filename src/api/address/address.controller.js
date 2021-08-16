@@ -1,23 +1,23 @@
 const service = require('./address.service');
 
-const getUser = (req, res) => {
-    service.getUser(req).then((result) => {
+const getAddress = (req, res) => {
+    service.getAddress(req).then((result) => {
         res.status(200).send(result);
     }).catch((err) => {
         res.status(500).send("Internal Server Error");
     })
 }
 
-const saveUser = (req, res) => {
-    service.saveUser(req).then((result) => {
+const saveAddress = (req, res) => {
+    service.saveAddress(req).then((result) => {
         res.status(200).send(result);
     }).catch((err) => {
         console.log(err);
         res.status(500).send("Internal Server Error");
     })
 }
-const updateUser = (req, res) => {
-    service.updateUser(req).then((result) => {
+const updateAddress = (req, res) => {
+    service.updateAddress(req).then((result) => {
         res.status(200).send("updated successfully");
     }).catch((err) => {
         console.log(err);
@@ -25,16 +25,16 @@ const updateUser = (req, res) => {
     })
 }
 
-const deleteUser = (req, res) => {
-    service.deleteUser(req).then((result) => {
+const deleteAddress = (req, res) => {
+    service.deleteAddress(req).then((result) => {
         res.status(200).send("Deleted successfully");
     }).catch((err) => {
         console.log(err);
         res.status(500).send("Internal Server Error");
     })
 }
-const getUserById = (req, res) => {
-    service.getUserById(req).then((result) => {
+const getAddressById = (req, res) => {
+    service.getAddressById(req).then((result) => {
         res.status(200).send(result);
     }).catch((err) => {
         console.log(err);
@@ -43,9 +43,9 @@ const getUserById = (req, res) => {
 }
 
 module.exports = {
-    getUser,
-    saveUser,
-    updateUser,
-    deleteUser,
-    getUserById
+    getAddress,
+    saveAddress,
+    updateAddress,
+    deleteAddress,
+    getAddressById
 }

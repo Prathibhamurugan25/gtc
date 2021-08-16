@@ -1,78 +1,79 @@
 <html>
 
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/admin.css">
+
+    <link rel="stylesheet" href="css/index.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/jquery-3.6.0.js"></script>
+
 </head>
 
 <body>
     <div class="sidebar">
         <div class="logo-details">
-            <i class='bx bxl-c-plus-plus'></i>
+            <i class='bx bx-grid-alt'></i>
             <span class="logo_name">Admin Page</span>
         </div>
         <ul class="nav-links">
             <li>
-                <a href="#" class="active">
-                    <i class='bx bx-grid-alt'></i>
+                <a href="/home" class="active">
+                    <i class='bx bx-pie-chart-alt-2'></i>
                     <span class="links_name">Home</span>
                 </a>
             </li>
-            
+
             <li>
-                <a href="#">
-                    <i class='bx bx-box'></i>
-                    <span class="links_name">Admin</span>
-                </a>
-            </li>
-            
-            <li>
-                <a href="#">
-                    <i class='bx bx-list-ul'></i>
+                <a href="/vendor">
+                    <i class='bx bx-cog'></i>
                     <span class="links_name">Vendor</span>
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class='bx bx-pie-chart-alt-2'></i>
+                <a href="/users">
+                    <i class='bx bx-user'></i>
                     <span class="links_name">User</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="product">
                     <i class='bx bx-coin-stack'></i>
                     <span class="links_name">Product</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/category">
                     <i class='bx bx-book-alt'></i>
                     <span class="links_name">Category</span>
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class='bx bx-user'></i>
+                <a href="/subCategory">
+                    <i class='bx bx-list-ul'></i>
                     <span class="links_name">Sub_Category</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/ticket">
                     <i class='bx bx-message'></i>
                     <span class="links_name">Ticket</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/order">
                     <i class='bx bx-heart'></i>
                     <span class="links_name">Order</span>
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class='bx bx-cog'></i>
+                <a href="/ad">
+                    <i class='bx bx-box'></i>
                     <span class="links_name">Ad</span>
                 </a>
             </li>
@@ -89,18 +90,31 @@
         <nav>
             <div class="sidebar-button">
                 <i class='bx bx-menu sidebarBtn'></i>
-                <span class="dashboard">Global Trade Connect</span>
+                <span class="dashboard">{{title}}</span>
             </div>
             <div class="search-box">
                 <input type="text" placeholder="Search...">
                 <i class='bx bx-search'></i>
             </div>
         </nav>
+            <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="piechart1"></div>
+            </div>
+            <div class="col">
+                <div id="piechart2"></div>
+            </div>
+        </div>
+
+    </div>
+    <canvas id="myChart" class="lineGraph"></canvas>
+
+
 
     </section>
-    <center>
-    <h2>Global Connect Admin Site</h2>
-    </center>
+    <script src="/js/home.js"></script>
+
 </body>
 
 </html>

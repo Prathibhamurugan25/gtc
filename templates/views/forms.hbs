@@ -9,7 +9,7 @@
 </head>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="#">
+		<form id="registrationForm">
 			<h1>Create Account</h1>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -17,15 +17,15 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name" />
-			<input type="password" id="1stPassword" placeholder="Password" />
+			<input type="email" id="mail" placeholder="Email" />
+			<input type="password" id="1stPassword" placeholder="Password"  />
 			<input type="password" id="ConfirmPassword" placeholder="ReEnterPassword" />
-			<button id="btnSubmit" onclick="return Validate()">sign Up</button>
-
+			<button id="btnSubmit">sign Up</button>
 		</form>
 	</div>
+
 	<div class="form-container sign-in-container">
-		<form action="#">
+		<form class="trim">
 			<h1>Sign in</h1>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -39,31 +39,11 @@
 			<div class="absolute">
 				<i class="far fa-eye" id="togglePassword"></i>
 			</div>
-			<button>Sign In</button>
-			<label for="rememberMe">Remember Me</label>
-			<input type="checkbox" id="rememberMe">
-		</form>
-
-	</div>
-
-
-	{{!-- <div class="form-container forget-password-container">
-		<form action="#">
-			<h1>Forgetpwd</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name" />
-			<input type="password" id="1stPassword" placeholder="Password" />
-			<input type="password" id="ConfirmPassword" placeholder="ReEnterPassword" />
-			<button id="btnSubmit" onclick="return Validate()">sign Up</button>
-			<a href="/">forgetPwd</a>
+            <input type="checkbox" id="remember">Remember Me<br><br>
+			<button id="loginBtn">Sign In</button>
 		</form>
 	</div>
-	--}}
+
 	<div class="overlay-container">
 		<div class="overlay">
 			<div class="overlay-panel overlay-left">

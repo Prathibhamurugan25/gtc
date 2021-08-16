@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const controller = require('./ad.controller');
 
-router.get('/:id', controller.getUserById);
-router.get('/', controller.getUser);
-router.post('/', controller.saveUser);
-router.put('/:id', controller.updateUser);
-router.delete('/:id', controller.deleteUser);
+router.get('/:id', controller.getAdById);
+router.get('/', controller.getAd);
+router.post('/', controller.saveAd);
+router.put('/:id', controller.updateAd);
+router.delete('/:id', controller.deleteAd);
 
 module.exports = router;

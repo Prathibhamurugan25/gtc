@@ -1,23 +1,24 @@
 const service = require('./ad.service');
 
-const getUser = (req, res) => {
-    service.getUser(req).then((result) => {
+const getAd = (req, res) => {
+    service.getAd(req).then((result) => {
         res.status(200).send(result);
     }).catch((err) => {
         res.status(500).send("Internal Server Error");
     })
 }
 
-const saveUser = (req, res) => {
-    service.saveUser(req).then((result) => {
+const saveAd = (req, res) => {
+    console.log("-----------------",req.body);
+    service.saveAd(req).then((result) => {
         res.status(200).send(result);
     }).catch((err) => {
         console.log(err);
         res.status(500).send("Internal Server Error");
     })
 }
-const updateUser = (req, res) => {
-    service.updateUser(req).then((result) => {
+const updateAd = (req, res) => {
+    service.updateAd(req).then((result) => {
         res.status(200).send("updated successfully");
     }).catch((err) => {
         console.log(err);
@@ -25,16 +26,16 @@ const updateUser = (req, res) => {
     })
 }
 
-const deleteUser = (req, res) => {
-    service.deleteUser(req).then((result) => {
+const deleteAd = (req, res) => {
+    service.deleteAd(req).then((result) => {
         res.status(200).send("Deleted successfully");
     }).catch((err) => {
         console.log(err);
         res.status(500).send("Internal Server Error");
     })
 }
-const getUserById = (req, res) => {
-    service.getUserById(req).then((result) => {
+const getAdById = (req, res) => {
+    service.getAdById(req).then((result) => {
         res.status(200).send(result);
     }).catch((err) => {
         console.log(err);
@@ -43,9 +44,9 @@ const getUserById = (req, res) => {
 }
 
 module.exports = {
-    getUser,
-    saveUser,
-    updateUser,
-    deleteUser,
-    getUserById
+    getAd,
+    saveAd,
+    updateAd,
+    deleteAd,
+    getAdById
 }

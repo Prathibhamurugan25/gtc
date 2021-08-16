@@ -1,23 +1,23 @@
 const service = require('./cart.service');
 
-const getUser = (req, res) => {
-    service.getUser(req).then((result) => {
+const getCart = (req, res) => {
+    service.getCart(req).then((result) => {
         res.status(200).send(result);
     }).catch((err) => {
         res.status(500).send("Internal Server Error");
     })
 }
 
-const saveUser = (req, res) => {
-    service.saveUser(req).then((result) => {
+const saveCart = (req, res) => {
+    service.saveCart(req).then((result) => {
         res.status(200).send(result);
     }).catch((err) => {
         console.log(err);
         res.status(500).send("Internal Server Error");
     })
 }
-const updateUser = (req, res) => {
-    service.updateUser(req).then((result) => {
+const updateCart = (req, res) => {
+    service.updateCart(req).then((result) => {
         res.status(200).send("updated successfully");
     }).catch((err) => {
         console.log(err);
@@ -25,16 +25,16 @@ const updateUser = (req, res) => {
     })
 }
 
-const deleteUser = (req, res) => {
-    service.deleteUser(req).then((result) => {
+const deleteCart = (req, res) => {
+    service.deleteCart(req).then((result) => {
         res.status(200).send("Deleted successfully");
     }).catch((err) => {
         console.log(err);
         res.status(500).send("Internal Server Error");
     })
 }
-const getUserById = (req, res) => {
-    service.getUserById(req).then((result) => {
+const getCartById = (req, res) => {
+    service.getCartById(req).then((result) => {
         res.status(200).send(result);
     }).catch((err) => {
         console.log(err);
@@ -43,9 +43,9 @@ const getUserById = (req, res) => {
 }
 
 module.exports = {
-    getUser,
-    saveUser,
-    updateUser,
-    deleteUser,
-    getUserById
+    getCart,
+    saveCart,
+    updateCart,
+    deleteCart,
+    getCartById
 }
